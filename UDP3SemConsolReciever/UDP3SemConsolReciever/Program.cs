@@ -5,6 +5,7 @@ using System.Net.Http;
 using System.Net.Sockets;
 using System.Text;
 using System.Threading.Tasks;
+using Newtonsoft.Json;
 
 namespace UDP3SemConsolReciever
 {
@@ -18,22 +19,33 @@ namespace UDP3SemConsolReciever
         // Listen for activity on all network interfaces
         // https://msdn.microsoft.com/en-us/library/system.net.ipaddress.ipv6any.aspx
 
-        public static async void GetWeight(weight w)
+        private const string weightUri = "https://localhost:44355/api/weight";
+
+        public static async void AddWeightAsync(weight newWeight)
         {
-            string myUrl = "https://harestcoinservice.azurewebsites.net/api/coin";
             using (HttpClient client = new HttpClient())
             {
-                string content = await client.GetStringAsync(myUrl);
-                IList<weight> cList = JsonConvert.DeserializeObject<IList<weight>>(content);
 
+                var jsonString = JsonConvert.SerializeObject(newWeight);
+                Console.WriteLine("JSON: " + jsonString);
+                StringContent content = new StringContent(jsonString, Encoding.UTF8, "application/json");
 
+                HttpResponseMessage response = await client.PostAsync(weightUri, content);
+                if (response.StatusCode == HttpStatusCode.Conflict)
+                {
+                    throw new Exception("Customer already exists. Try another id");
+                }
+                response.EnsureSuccessStatusCode();
+                string str = await response.Content.ReadAsStringAsync();
+                weight copyOfNewWeight = JsonConvert.DeserializeObject<weight>(str);
+                //return copyOfNewWeight;
             }
-        }
 
+        }
 
         static void Main()
         {
-            weight weightKilo = new weight();
+            
 
             using (UdpClient socket = new UdpClient(new IPEndPoint(IPAddress.Any, Port)))
             {
@@ -55,9 +67,10 @@ namespace UDP3SemConsolReciever
                     Console.WriteLine(date);
                     string dateTime = date + " " + time;
 
-
+                    weight weightKilo = new weight();
                     weightKilo._dateTime = dateTime;
                     weightKilo._weight = Convert.ToDouble(weight);
+                    AddWeightAsync(weightKilo);
 
                     //Parse(message);
                 }
