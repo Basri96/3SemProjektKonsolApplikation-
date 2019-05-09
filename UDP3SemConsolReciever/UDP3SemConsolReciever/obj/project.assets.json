@@ -694,11 +694,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\source\\Projekt\\UDP3SemConsolReciever\\UDP3SemConsolReciever\\UDP3SemConsolReciever.csproj",
+      "projectUniqueName": "C:\\source\\3SemProjektKonsolApplikation-2\\UDP3SemConsolReciever\\UDP3SemConsolReciever\\UDP3SemConsolReciever.csproj",
       "projectName": "UDP3SemConsolReciever",
-      "projectPath": "C:\\source\\Projekt\\UDP3SemConsolReciever\\UDP3SemConsolReciever\\UDP3SemConsolReciever.csproj",
+      "projectPath": "C:\\source\\3SemProjektKonsolApplikation-2\\UDP3SemConsolReciever\\UDP3SemConsolReciever\\UDP3SemConsolReciever.csproj",
       "packagesPath": "C:\\Users\\Hasan\\.nuget\\packages\\",
-      "outputPath": "C:\\source\\Projekt\\UDP3SemConsolReciever\\UDP3SemConsolReciever\\obj\\",
+      "outputPath": "C:\\source\\3SemProjektKonsolApplikation-2\\UDP3SemConsolReciever\\UDP3SemConsolReciever\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "c:\\program files\\dotnet\\sdk\\NuGetFallbackFolder"
