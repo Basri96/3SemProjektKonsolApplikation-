@@ -19,9 +19,9 @@ namespace UDP3SemConsolReciever
         // Listen for activity on all network interfaces
         // https://msdn.microsoft.com/en-us/library/system.net.ipaddress.ipv6any.aspx
 
-        private const string weightUri = "https://localhost:44355/api/weight";
+        private const string weightUri = "https://localhost:44355/api/weight/";
 
-        public static async void AddWeightAsync(weight newWeight)
+        public static async Task<weight> AddWeightAsync(weight newWeight)
         {
             using (HttpClient client = new HttpClient())
             {
@@ -38,44 +38,51 @@ namespace UDP3SemConsolReciever
                 response.EnsureSuccessStatusCode();
                 string str = await response.Content.ReadAsStringAsync();
                 weight copyOfNewWeight = JsonConvert.DeserializeObject<weight>(str);
-                //return copyOfNewWeight;
+                return copyOfNewWeight;
             }
 
         }
 
         static void Main()
         {
-            
 
-            using (UdpClient socket = new UdpClient(new IPEndPoint(IPAddress.Any, Port)))
-            {
-                IPEndPoint remoteEndPoint = new IPEndPoint(0, 0);
-                while (true)
-                {
-                    Console.WriteLine("Waiting for broadcast {0}", socket.Client.LocalEndPoint);
-                    byte[] datagramReceived = socket.Receive(ref remoteEndPoint);
+            weight weightKilo = new weight();
+            weightKilo.dateTime = Convert.ToString(DateTime.Now);
+            weightKilo.weightMeasure = "22.6";
+            AddWeightAsync(weightKilo);
+            Console.Read();
 
-                    string message = Encoding.ASCII.GetString(datagramReceived, 0, datagramReceived.Length);
-                    Console.WriteLine("Receives {0} bytes from {1} port {2} message {3}", datagramReceived.Length,
-                        remoteEndPoint.Address, remoteEndPoint.Port, message);
+            //using (UdpClient socket = new UdpClient(new IPEndPoint(IPAddress.Any, Port)))
+            //{
+            //    IPEndPoint remoteEndPoint = new IPEndPoint(0, 0);
 
-                    string[] parts = message.Split(' ');
-                    //Console.WriteLine(message);
-                    string date = parts[2];
-                    string time = parts[3];
-                    string weight = parts[5];
-                    Console.WriteLine(date);
-                    string dateTime = date + " " + time;
 
-                    weight weightKilo = new weight();
-                    weightKilo._dateTime = dateTime;
-                    weightKilo._weight = Convert.ToDouble(weight);
-                    AddWeightAsync(weightKilo);
+            //while (true)
+            //{
+            //    Console.WriteLine("Waiting for broadcast {0}", socket.Client.LocalEndPoint);
+            //    byte[] datagramReceived = socket.Receive(ref remoteEndPoint);
 
-                    //Parse(message);
-                }
-            }
-        }
+            //    string message = Encoding.ASCII.GetString(datagramReceived, 0, datagramReceived.Length);
+            //    Console.WriteLine("Receives {0} bytes from {1} port {2} message {3}", datagramReceived.Length,
+            //        remoteEndPoint.Address, remoteEndPoint.Port, message);
+
+            //    string[] parts = message.Split(' ');
+            //    //Console.WriteLine(message);
+            //    string date = parts[2];
+            //    string time = parts[3];
+            //    string weight = parts[5];
+            //    Console.WriteLine(date);
+            //    string dateTime = date + " " + time;
+
+            //    weight weightKilo = new weight();
+            //    weightKilo._dateTime = dateTime;
+            //    weightKilo._weight = Convert.ToDouble(weight);
+            //    AddWeightAsync(weightKilo);
+
+            //Parse(message);
+        //}
+    }
+        //}
 
         // To parse data from the IoT devices in the teachers room, Elisagårdsvej
         private static void Parse(string response)
@@ -100,4 +107,5 @@ namespace UDP3SemConsolReciever
             //Console.WriteLine(date, time, weight);
         }
     }
+    
 }
