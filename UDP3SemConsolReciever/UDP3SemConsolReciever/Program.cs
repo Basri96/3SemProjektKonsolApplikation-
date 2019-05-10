@@ -21,7 +21,7 @@ namespace UDP3SemConsolReciever
 
         private const string weightUri = "https://localhost:44355/api/weight/";
 
-        public static async Task<weight> AddWeightAsync(weight newWeight)
+        public static async Task<int> AddWeightAsync(weight newWeight)
         {
             using (HttpClient client = new HttpClient())
             {
@@ -37,7 +37,7 @@ namespace UDP3SemConsolReciever
                 }
                 response.EnsureSuccessStatusCode();
                 string str = await response.Content.ReadAsStringAsync();
-                weight copyOfNewWeight = JsonConvert.DeserializeObject<weight>(str);
+                int copyOfNewWeight = JsonConvert.DeserializeObject<int>(str);
                 return copyOfNewWeight;
             }
 
@@ -46,66 +46,67 @@ namespace UDP3SemConsolReciever
         static void Main()
         {
 
-            weight weightKilo = new weight();
-            weightKilo.dateTime = Convert.ToString(DateTime.Now);
-            weightKilo.weightMeasure = "22.6";
-            AddWeightAsync(weightKilo);
-            Console.Read();
+            //weight weightKilo = new weight();
+            //weightKilo.dato = Convert.ToString(DateTime.Now);
+            //weightKilo.weightMeasure = "22.6";
+            //int i = AddWeightAsync(weightKilo).Result;
+            //Console.Read();
 
-            //using (UdpClient socket = new UdpClient(new IPEndPoint(IPAddress.Any, Port)))
-            //{
-            //    IPEndPoint remoteEndPoint = new IPEndPoint(0, 0);
-
-
-            //while (true)
-            //{
-            //    Console.WriteLine("Waiting for broadcast {0}", socket.Client.LocalEndPoint);
-            //    byte[] datagramReceived = socket.Receive(ref remoteEndPoint);
-
-            //    string message = Encoding.ASCII.GetString(datagramReceived, 0, datagramReceived.Length);
-            //    Console.WriteLine("Receives {0} bytes from {1} port {2} message {3}", datagramReceived.Length,
-            //        remoteEndPoint.Address, remoteEndPoint.Port, message);
-
-            //    string[] parts = message.Split(' ');
-            //    //Console.WriteLine(message);
-            //    string date = parts[2];
-            //    string time = parts[3];
-            //    string weight = parts[5];
-            //    Console.WriteLine(date);
-            //    string dateTime = date + " " + time;
-
-            //    weight weightKilo = new weight();
-            //    weightKilo._dateTime = dateTime;
-            //    weightKilo._weight = Convert.ToDouble(weight);
-            //    AddWeightAsync(weightKilo);
-
-            //Parse(message);
-        //}
-    }
-        //}
-
-        // To parse data from the IoT devices in the teachers room, Elisagårdsvej
-        private static void Parse(string response)
-        {
-            string[] parts = response.Split(' ');
-            foreach (string part in parts)
+            using (UdpClient socket = new UdpClient(new IPEndPoint(IPAddress.Any, Port)))
             {
-                // Console.WriteLine(part);
-                Console.WriteLine(response);
-                string date = parts[11];
-                string time = parts[12];
-                string weight = parts[14];
-                Console.WriteLine(date, time, weight);
-            }
+                IPEndPoint remoteEndPoint = new IPEndPoint(0, 0);
 
-            //string date = parts[11];
-            //string time = parts[12];
-            //string weight = parts[14];
-            //string temperatureLine = parts[6];
-            //string temperatureStr = temperatureLine.Substring(temperatureLine.IndexOf(": ") + 2);
-            //Console.WriteLine(temperatureStr);
-            //Console.WriteLine(date, time, weight);
+
+                while (true)
+                {
+                    Console.WriteLine("Waiting for broadcast {0}", socket.Client.LocalEndPoint);
+                    byte[] datagramReceived = socket.Receive(ref remoteEndPoint);
+
+                    string message = Encoding.ASCII.GetString(datagramReceived, 0, datagramReceived.Length);
+                    Console.WriteLine("Receives {0} bytes from {1} port {2} message {3}", datagramReceived.Length,
+                        remoteEndPoint.Address, remoteEndPoint.Port, message);
+
+                    string[] parts = message.Split(' ');
+                    //Console.WriteLine(message);
+                    string date = parts[2];
+                    string time = parts[3];
+                    string weight = parts[5];
+                    Console.WriteLine(date);
+                    string dateTime = date + " " + time;
+
+                    weight weightKilo = new weight();
+                    weightKilo.dato = dateTime;
+                    weightKilo.weightMeasure = weight;
+                    int i = AddWeightAsync(weightKilo).Result;
+
+                    //Parse(message);
+                    //}
+                }
+                //}
+
+                // To parse data from the IoT devices in the teachers room, Elisagårdsvej
+                //private static void Parse(string response)
+                //{
+                //    string[] parts = response.Split(' ');
+                //    foreach (string part in parts)
+                //    {
+                //        // Console.WriteLine(part);
+                //        Console.WriteLine(response);
+                //        string date = parts[11];
+                //        string time = parts[12];
+                //        string weight = parts[14];
+                //        Console.WriteLine(date, time, weight);
+                //    }
+
+                //    //string date = parts[11];
+                //    //string time = parts[12];
+                //    //string weight = parts[14];
+                //    //string temperatureLine = parts[6];
+                //    //string temperatureStr = temperatureLine.Substring(temperatureLine.IndexOf(": ") + 2);
+                //    //Console.WriteLine(temperatureStr);
+                //    //Console.WriteLine(date, time, weight);
+                //}
+            }
         }
     }
-    
 }
