@@ -69,7 +69,7 @@ namespace UDP3SemConsolReciever
                     string[] parts = message.Split(' ');
                     //Console.WriteLine(message);
                     string date = parts[2];
-                    string time = parts[3];
+                    string time = parts[3].Substring(0,8);
                     string weight = parts[5];
                     Console.WriteLine(date);
                     string dateTime = date + " " + time;
