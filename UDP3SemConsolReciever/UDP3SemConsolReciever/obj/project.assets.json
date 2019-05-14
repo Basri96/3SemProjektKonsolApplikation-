@@ -691,7 +691,7 @@
       ]
     },
     "Newtonsoft.Json/12.0.2": {
-      "sha512": "rTK0s2EKlfHsQsH6Yx2smvcTCeyoDNgCW7FEYyV01drPlh2T243PR2DiDXqtC5N4GDm4Ma/lkxfW5a/4793vbA==",
+      "sha512": "mtweBXPWhp1CMQATtBT7ZfMZrbZBTKfjGwz6Y75NwGjx/GztDaUnfw8GK9KZ2T4fDIqKJyDjc9Rxlw5+G2FcVA==",
       "type": "package",
       "path": "newtonsoft.json/12.0.2",
       "files": [
@@ -728,23 +728,23 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\pc\\.nuget\\packages\\": {},
+    "C:\\Users\\Vitus\\.nuget\\packages\\": {},
     "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\3SemProjekt\\3SemProjektKonsolApplikation-\\UDP3SemConsolReciever\\UDP3SemConsolReciever\\UDP3SemConsolReciever.csproj",
+      "projectUniqueName": "C:\\Source\\3SemProjektKonsolApplikation-\\UDP3SemConsolReciever\\UDP3SemConsolReciever\\UDP3SemConsolReciever.csproj",
       "projectName": "UDP3SemConsolReciever",
-      "projectPath": "C:\\3SemProjekt\\3SemProjektKonsolApplikation-\\UDP3SemConsolReciever\\UDP3SemConsolReciever\\UDP3SemConsolReciever.csproj",
-      "packagesPath": "C:\\Users\\pc\\.nuget\\packages\\",
-      "outputPath": "C:\\3SemProjekt\\3SemProjektKonsolApplikation-\\UDP3SemConsolReciever\\UDP3SemConsolReciever\\obj\\",
+      "projectPath": "C:\\Source\\3SemProjektKonsolApplikation-\\UDP3SemConsolReciever\\UDP3SemConsolReciever\\UDP3SemConsolReciever.csproj",
+      "packagesPath": "C:\\Users\\Vitus\\.nuget\\packages\\",
+      "outputPath": "C:\\Source\\3SemProjektKonsolApplikation-\\UDP3SemConsolReciever\\UDP3SemConsolReciever\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
       ],
       "configFilePaths": [
-        "C:\\Users\\pc\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\Vitus\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [

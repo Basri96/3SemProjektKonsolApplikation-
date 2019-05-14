@@ -19,7 +19,7 @@ namespace UDP3SemConsolReciever
         // Listen for activity on all network interfaces
         // https://msdn.microsoft.com/en-us/library/system.net.ipaddress.ipv6any.aspx
 
-        private const string weightUri = "https://localhost:44355/api/weight/";
+        private const string weightUri = "https://restsmarttrashservice.azurewebsites.net/api/weight/";
 
         public static async Task<int> AddWeightAsync(weight newWeight)
         {

@@ -20,3 +20,14 @@ C:\3SemProjekt\3SemProjektKonsolApplikation-\UDP3SemConsolReciever\UDP3SemConsol
 C:\3SemProjekt\3SemProjektKonsolApplikation-\UDP3SemConsolReciever\UDP3SemConsolReciever\bin\Debug\netcoreapp2.1\UDP3SemConsolReciever.runtimeconfig.dev.json
 C:\3SemProjekt\3SemProjektKonsolApplikation-\UDP3SemConsolReciever\UDP3SemConsolReciever\bin\Debug\netcoreapp2.1\UDP3SemConsolReciever.dll
 C:\3SemProjekt\3SemProjektKonsolApplikation-\UDP3SemConsolReciever\UDP3SemConsolReciever\bin\Debug\netcoreapp2.1\UDP3SemConsolReciever.pdb
+C:\Source\3SemProjektKonsolApplikation-\UDP3SemConsolReciever\UDP3SemConsolReciever\bin\Debug\netcoreapp2.1\UDP3SemConsolReciever.deps.json
+C:\Source\3SemProjektKonsolApplikation-\UDP3SemConsolReciever\UDP3SemConsolReciever\bin\Debug\netcoreapp2.1\UDP3SemConsolReciever.runtimeconfig.json
+C:\Source\3SemProjektKonsolApplikation-\UDP3SemConsolReciever\UDP3SemConsolReciever\bin\Debug\netcoreapp2.1\UDP3SemConsolReciever.runtimeconfig.dev.json
+C:\Source\3SemProjektKonsolApplikation-\UDP3SemConsolReciever\UDP3SemConsolReciever\bin\Debug\netcoreapp2.1\UDP3SemConsolReciever.dll
+C:\Source\3SemProjektKonsolApplikation-\UDP3SemConsolReciever\UDP3SemConsolReciever\bin\Debug\netcoreapp2.1\UDP3SemConsolReciever.pdb
+C:\Source\3SemProjektKonsolApplikation-\UDP3SemConsolReciever\UDP3SemConsolReciever\obj\Debug\netcoreapp2.1\UDP3SemConsolReciever.csprojAssemblyReference.cache
+C:\Source\3SemProjektKonsolApplikation-\UDP3SemConsolReciever\UDP3SemConsolReciever\obj\Debug\netcoreapp2.1\UDP3SemConsolReciever.csproj.CoreCompileInputs.cache
+C:\Source\3SemProjektKonsolApplikation-\UDP3SemConsolReciever\UDP3SemConsolReciever\obj\Debug\netcoreapp2.1\UDP3SemConsolReciever.AssemblyInfoInputs.cache
+C:\Source\3SemProjektKonsolApplikation-\UDP3SemConsolReciever\UDP3SemConsolReciever\obj\Debug\netcoreapp2.1\UDP3SemConsolReciever.AssemblyInfo.cs
+C:\Source\3SemProjektKonsolApplikation-\UDP3SemConsolReciever\UDP3SemConsolReciever\obj\Debug\netcoreapp2.1\UDP3SemConsolReciever.dll
+C:\Source\3SemProjektKonsolApplikation-\UDP3SemConsolReciever\UDP3SemConsolReciever\obj\Debug\netcoreapp2.1\UDP3SemConsolReciever.pdb
