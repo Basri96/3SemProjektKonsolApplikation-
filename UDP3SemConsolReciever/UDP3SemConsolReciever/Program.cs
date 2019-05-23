@@ -45,17 +45,9 @@ namespace UDP3SemConsolReciever
 
         static void Main()
         {
-
-            //weight weightKilo = new weight();
-            //weightKilo.dato = Convert.ToString(DateTime.Now);
-            //weightKilo.weightMeasure = "22.6";
-            //int i = AddWeightAsync(weightKilo).Result;
-            //Console.Read();
-
             using (UdpClient socket = new UdpClient(new IPEndPoint(IPAddress.Any, Port)))
             {
                 IPEndPoint remoteEndPoint = new IPEndPoint(0, 0);
-
 
                 while (true)
                 {
@@ -82,30 +74,6 @@ namespace UDP3SemConsolReciever
                     //Parse(message);
                     //}
                 }
-                //}
-
-                // To parse data from the IoT devices in the teachers room, Elisagårdsvej
-                //private static void Parse(string response)
-                //{
-                //    string[] parts = response.Split(' ');
-                //    foreach (string part in parts)
-                //    {
-                //        // Console.WriteLine(part);
-                //        Console.WriteLine(response);
-                //        string date = parts[11];
-                //        string time = parts[12];
-                //        string weight = parts[14];
-                //        Console.WriteLine(date, time, weight);
-                //    }
-
-                //    //string date = parts[11];
-                //    //string time = parts[12];
-                //    //string weight = parts[14];
-                //    //string temperatureLine = parts[6];
-                //    //string temperatureStr = temperatureLine.Substring(temperatureLine.IndexOf(": ") + 2);
-                //    //Console.WriteLine(temperatureStr);
-                //    //Console.WriteLine(date, time, weight);
-                //}
             }
         }
     }

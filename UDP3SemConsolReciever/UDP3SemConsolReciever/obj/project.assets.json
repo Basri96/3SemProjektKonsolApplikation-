@@ -529,7 +529,7 @@
       ]
     },
     "Microsoft.NETCore.Platforms/2.1.0": {
-      "sha512": "aSTPL94NloSiQVL5Len8wbjFKOnoAX/vOh3s3DF6g3c7GUUMLCDvnBhmA72M2iN2AedyA8hpr7m89kzSAKUnJQ==",
+      "sha512": "GmkKfoyerqmsHMn7OZj0AKpcBabD+GaafqphvX2Mw406IwiJRy1pKcKqdCfKJfYmkRyJ6+e+RaUylgdJoDa1jQ==",
       "type": "package",
       "path": "microsoft.netcore.platforms/2.1.0",
       "files": [
@@ -691,7 +691,7 @@
       ]
     },
     "Newtonsoft.Json/12.0.2": {
-      "sha512": "mtweBXPWhp1CMQATtBT7ZfMZrbZBTKfjGwz6Y75NwGjx/GztDaUnfw8GK9KZ2T4fDIqKJyDjc9Rxlw5+G2FcVA==",
+      "sha512": "rTK0s2EKlfHsQsH6Yx2smvcTCeyoDNgCW7FEYyV01drPlh2T243PR2DiDXqtC5N4GDm4Ma/lkxfW5a/4793vbA==",
       "type": "package",
       "path": "newtonsoft.json/12.0.2",
       "files": [
@@ -728,23 +728,23 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\Vitus\\.nuget\\packages\\": {},
-    "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder": {}
+    "C:\\Users\\Hasan\\.nuget\\packages\\": {},
+    "c:\\program files\\dotnet\\sdk\\NuGetFallbackFolder": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Source\\3SemProjektKonsolApplikation-\\UDP3SemConsolReciever\\UDP3SemConsolReciever\\UDP3SemConsolReciever.csproj",
+      "projectUniqueName": "C:\\source\\3SemProjektKonsolApplikation-2\\UDP3SemConsolReciever\\UDP3SemConsolReciever\\UDP3SemConsolReciever.csproj",
       "projectName": "UDP3SemConsolReciever",
-      "projectPath": "C:\\Source\\3SemProjektKonsolApplikation-\\UDP3SemConsolReciever\\UDP3SemConsolReciever\\UDP3SemConsolReciever.csproj",
-      "packagesPath": "C:\\Users\\Vitus\\.nuget\\packages\\",
-      "outputPath": "C:\\Source\\3SemProjektKonsolApplikation-\\UDP3SemConsolReciever\\UDP3SemConsolReciever\\obj\\",
+      "projectPath": "C:\\source\\3SemProjektKonsolApplikation-2\\UDP3SemConsolReciever\\UDP3SemConsolReciever\\UDP3SemConsolReciever.csproj",
+      "packagesPath": "C:\\Users\\Hasan\\.nuget\\packages\\",
+      "outputPath": "C:\\source\\3SemProjektKonsolApplikation-2\\UDP3SemConsolReciever\\UDP3SemConsolReciever\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
-        "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+        "c:\\program files\\dotnet\\sdk\\NuGetFallbackFolder"
       ],
       "configFilePaths": [
-        "C:\\Users\\Vitus\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\Hasan\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
